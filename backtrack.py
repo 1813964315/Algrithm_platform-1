@@ -8,6 +8,7 @@ curV = 0
 bestx = None
 
 
+# 获取数据库内容和存入结果
 def Bt(s):
     last_time = time.time()
     c, n, w, v = search.table_data(s)
@@ -42,6 +43,7 @@ def Bt(s):
     return c, n, w, v, stime, bestx, bestV
 
 
+# 回溯算法主要代码
 def backtrack(i, w, v, n, c, x):
     global bestV, curW, curV, bestx
     if i >= n:
